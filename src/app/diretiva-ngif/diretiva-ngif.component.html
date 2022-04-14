@@ -1,0 +1,31 @@
+<h5>*ngIf</h5>
+
+<div *ngIf="cursos.length > 0">
+  Lista de Cursos
+</div>
+
+<div *ngIf="cursos.length == 0">
+  Não existem cursos para serem listados.
+</div>
+
+<div *ngIf="mostrarCursos">
+  Lista de Cursos
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não existem cursos para serem listados.
+</div>
+<br>
+
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
+
+<h5>Hidden como alternativa</h5>
+<p>o ngIf altera o DOM da página então a utilização de vários ngIf pode ser custosa. Como alternativa pode ser utilizado o hidden que é uma propriedade nativa dos elementos div do html</p>
+
+<div [hidden]="mostrarCursos">
+  Lista de Cursos
+</div>
+
+<div [hidden]="!mostrarCursos">
+  Não existem cursos para serem listados.
+</div>
